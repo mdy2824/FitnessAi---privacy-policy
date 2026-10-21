@@ -1,2 +1,362 @@
-hihi
-heill main how ae ui
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - FitnessAi</title>
+  <style>
+    :root {
+      --bg-color: #0B0E1B;
+      --card-bg: #141829;
+      --card-border: #222943;
+      --text-primary: #F0F3FF;
+      --text-secondary: #9AA3C2;
+      --accent-cyan: #00E5FF;
+      --accent-violet: #6C63FF;
+      --accent-green: #38EF7D;
+      --accent-amber: #FFC857;
+      --code-bg: #1B2138;
+      --line-height: 1.68;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      line-height: var(--line-height);
+      padding: 32px 16px;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 40px 36px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 16px 8px; }
+      .container { padding: 24px 18px; border-radius: 12px; }
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(108, 99, 255, 0.15);
+      border: 1px solid rgba(108, 99, 255, 0.4);
+      color: #A5A0FF;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    h1 .accent { color: var(--accent-cyan); }
+
+    .last-updated {
+      color: var(--text-secondary);
+      font-size: 14px;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .intro-callout {
+      background: rgba(0, 229, 255, 0.06);
+      border-left: 4px solid var(--accent-cyan);
+      padding: 16px 20px;
+      border-radius: 0 10px 10px 0;
+      margin-bottom: 32px;
+      color: #E2E8F0;
+      font-size: 15px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-top: 36px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--accent-cyan);
+      border-radius: 2px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #E0E7FF;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    p strong { color: var(--text-primary); }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 18px;
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+
+    li { margin-bottom: 8px; }
+    li strong { color: var(--text-primary); }
+
+    .badge-no {
+      background: rgba(56, 239, 125, 0.15);
+      color: var(--accent-green);
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+
+    .badge-yes {
+      background: rgba(255, 200, 87, 0.15);
+      color: var(--accent-amber);
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+
+    .service-card {
+      background: #191E33;
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 16px 0;
+    }
+
+    .service-title {
+      font-weight: 700;
+      color: #FFFFFF;
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover { color: #70EFFF; text-decoration: underline; }
+
+    .contact-box {
+      background: #1A1F36;
+      border: 1px dashed var(--accent-violet);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 24px;
+    }
+
+    .email-highlight {
+      display: inline-block;
+      background: var(--code-bg);
+      color: var(--accent-cyan);
+      font-family: monospace;
+      font-size: 15px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--card-border);
+      margin-top: 6px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--card-border);
+      color: #6C7693;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header-badge">Legal &amp; Privacy Information</div>
+    <h1>Privacy Policy for <span class="accent">FitnessAi</span></h1>
+    <div class="last-updated">Last Updated: October 21, 2026 &bull; Effective Date: October 21, 2026</div>
+
+    <div class="intro-callout">
+      <strong>Transparency Summary:</strong> FitnessAi does not require an account, email, name, or password. The only information that leaves your device is the meal text and food photos you choose to submit for AI analysis, along with a random anonymous identifier that the app needs to securely reach its analysis service. Your goals, meal history, and body details stay on your device. We do not track your GPS location, we show no ads, and we do not sell or monetize any personal information.
+    </div>
+
+    <h2>1. Overview and Purpose</h2>
+    <p>
+      This Privacy Policy describes how <strong>FitnessAi</strong> ("the Application", "we", "our", or "us") handles information when you use our mobile application available on Google Play. FitnessAi is a meal and macronutrient tracking app. You can describe a meal in text or add a photo of your food, and an AI model estimates its calories, protein, carbohydrates, and fat so you can track your daily and weekly progress against goals you set.
+    </p>
+
+    <h2>2. Information We Collect</h2>
+    <p>
+      We handle the minimum information necessary to provide the app's core features:
+    </p>
+
+    <ul>
+      <li>
+        <strong>Meal Text and Food Photos &mdash; <span class="badge-yes">SENT FOR AI ANALYSIS</span>:</strong>
+        When you log a meal by typing a description, taking a photo, or choosing a photo from your gallery, that text and/or image is sent over an encrypted connection to our analysis service and on to Google's Gemini API, which returns the nutrition estimate. This content is used only to generate that estimate. The Application does not save your photos or meal text on our servers after the result is returned.
+      </li>
+      <li>
+        <strong>Anonymous Identifier &mdash; <span class="badge-yes">COLLECTED</span>:</strong>
+        The app signs you in anonymously using Firebase Authentication. This creates a random identifier that lets our analysis service confirm that a request comes from the app. It is not linked to your name, email address, phone number, or any other real-world identity, and we do not use it for tracking or advertising.
+      </li>
+      <li>
+        <strong>Goals, Meal History, and Body Details &mdash; <span class="badge-no">STORED ON YOUR DEVICE ONLY</span>:</strong>
+        Your calorie and macro goals, logged meals, daily and weekly totals, and any details you enter on the Body screen (such as sex, age, weight, height, activity level, and optional neck, waist, and hip measurements) are stored in a local database on your device. They are calculated and displayed on your device and are not uploaded to us.
+      </li>
+      <li>
+        <strong>Personal Identifiable Information (PII) &mdash; <span class="badge-no">NOT COLLECTED</span>:</strong>
+        We do not collect your real name, email address, phone number, postal address, contacts, or password. There is no account creation, login, or sign-in other than the anonymous sign-in described above.
+      </li>
+      <li>
+        <strong>Your Device's Physical GPS Location &mdash; <span class="badge-no">NOT ACCESSED</span>:</strong>
+        The Application does <em>not</em> request, track, or access your real-world GPS coordinates or background device location.
+      </li>
+      <li>
+        <strong>Camera and Photo Library &mdash; <span class="badge-yes">ONLY WHEN YOU CHOOSE</span>:</strong>
+        The app asks for camera or photo library access only when you tap the button to add a food photo. It never accesses your camera or photos in the background, and only the single photo you select is used.
+      </li>
+    </ul>
+
+    <h2>3. How Your Information Is Used</h2>
+    <p>FitnessAi uses the information above only to deliver the features you ask for:</p>
+    <ul>
+      <li>
+        <strong>AI Nutrition Estimates:</strong> Meal text and photos are analyzed to return estimated calories, protein, carbohydrates, and fat for the meal.
+      </li>
+      <li>
+        <strong>Goals and Progress:</strong> Your goals, meal history, and totals are calculated and shown on your device, including the daily progress bars and the weekly overview.
+      </li>
+      <li>
+        <strong>Calorie and Protein Suggestions:</strong> If you use the Body screen, the details you enter are used on your device to calculate suggested calorie and protein targets and an optional body fat estimate. Nothing is applied to your goals until you confirm it.
+      </li>
+      <li>
+        <strong>Security and Reliability:</strong> The anonymous identifier and standard technical logs help us keep the analysis service secure and fix errors.
+      </li>
+    </ul>
+    <p>We do not use your information for advertising or marketing, and we do not sell it.</p>
+
+    <h2>4. Third-Party Services and APIs</h2>
+    <p>
+      The Application uses third-party cloud services to provide AI analysis. These providers may receive certain technical data (such as your IP address and standard request metadata) as necessary to respond to network requests:
+    </p>
+
+    <div class="service-card">
+      <div class="service-title">Google Gemini API</div>
+      <p>
+        The meal text and photos you submit are processed by Google's Gemini API to generate nutrition estimates. This processing is governed by Google's terms and privacy practices.
+      </p>
+      <p>
+        Learn more: <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener noreferrer">Gemini API Terms of Service</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-title">Firebase (Authentication and Cloud Functions)</div>
+      <p>
+        The Application uses <strong>Firebase Authentication</strong> for anonymous sign-in and <strong>Firebase Cloud Functions</strong> to receive your meal text or photo and securely forward it to the AI service. Google Cloud may automatically log technical information such as request time, IP address, and error details for security and troubleshooting.
+      </p>
+      <p>
+        Learn more: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy and Security</a>.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-title">Expo Framework</div>
+      <p>
+        The Application is built with the Expo (React Native) framework. Expo is used as a development and build tool, and the Application does not send your meal data to Expo.
+      </p>
+      <p>
+        Learn more: <a href="https://expo.dev/privacy" target="_blank" rel="noopener noreferrer">Expo Privacy Policy</a>.
+      </p>
+    </div>
+
+    <h2>5. Data Retention and Storage</h2>
+    <p>
+      Your goals, meal history, and body details are stored only on your device and remain there until you delete them or remove the app. Meal text and photos sent for AI analysis are processed to return a result and are not stored by the Application on our servers. Technical logs on Google Cloud are kept for a limited period according to Google's standard retention settings. The anonymous identifier remains associated with the Application's Firebase project until it is deleted. We do not share this information with advertising networks or use it for marketing purposes.
+    </p>
+
+    <h2>6. User Rights and Data Control</h2>
+    <p>
+      Under applicable privacy laws (including GDPR, CCPA/CPRA, and Google Play User Data policies), you have the right to control your data.
+    </p>
+    <ul>
+      <li>You can delete individual meals and body entries at any time inside the app.</li>
+      <li>You can delete all locally stored data at any time via your Android device settings: <strong>Settings &rarr; Apps &rarr; FitnessAi &rarr; Storage &amp; cache &rarr; Clear Storage</strong>. Doing this also removes the anonymous identifier from your device, and a new one will be created the next time you use the AI feature.</li>
+      <li>Uninstalling the app removes all data stored on your device.</li>
+      <li>You can ask us to delete any server-side record associated with your anonymous identifier, or ask questions about your data, by contacting us using the details in Section 11.</li>
+    </ul>
+
+    <h2>7. Health Information Disclaimer</h2>
+    <p>
+      FitnessAi provides <strong>estimates only</strong>. Nutrition values produced by AI, as well as calorie targets and body fat figures calculated by the app, are approximate and may be inaccurate. The Application is not a medical device and does not provide medical advice, diagnosis, or treatment. Please consult a doctor or a qualified dietitian before making significant changes to your diet or exercise routine, especially if you have a medical condition.
+    </p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>
+      FitnessAi is intended for adults and is not directed at children under the age of 13 (or under the age of 16 in certain jurisdictions). We do not knowingly collect or solicit personal information from children. If you believe a child has provided information through this app, please contact us so we can take appropriate measures.
+    </p>
+
+    <h2>9. Security</h2>
+    <p>
+      Data sent between the Application and our analysis service uses encrypted connections (HTTPS). While we take reasonable steps to protect the information handled by the Application, no method of storage or transmission is completely secure.
+    </p>
+
+    <h2>10. Changes to This Privacy Policy</h2>
+    <p>
+      We may occasionally update this Privacy Policy to reflect changes in our features, service providers, or relevant legal regulations. Any revisions will be reflected on this page with an updated "Last Updated" date.
+    </p>
+
+    <h2>11. Contact Us</h2>
+    <div class="contact-box">
+      <p>If you have any questions, suggestions, or concerns regarding this Privacy Policy or the data practices of FitnessAi &mdash; including requesting deletion of data associated with your anonymous identifier &mdash; please contact our support team at:</p>
+      <div class="email-highlight">mdy2824@gmail.com</div>
+    </div>
+
+    <footer>
+      &copy; 2026 FitnessAi. All rights reserved. Built for Google Play Store publication.
+    </footer>
+  </div>
+
+</body>
+</html>
